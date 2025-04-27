@@ -133,6 +133,10 @@ section p {
     transition: 0.1s box-shadow linear;
 }
 
+.parking-spot * {
+    pointer-events: none;
+}
+
 .ps-number {
     font-size: 2rem;
     font-weight: bold;
