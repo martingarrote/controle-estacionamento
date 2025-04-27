@@ -1,27 +1,27 @@
 export default class ParkingSpotModel {
     constructor() {
-        this.data = []
+        this.parkingSpots = []
     }
     
     async init() {
-        this.data = await this.load()
+        this.parkingSpots = await this.load()
 
         this.load()
     }
 
     async load() {
         if (this.hasCache()) {
-            this.data = this.loadFromCache()
+            this.parkingSpots = this.loadFromCache()
             return
         }
         
-        this.data = await this.loadFromJson()
-        this.saveCache(this.data)
+        this.parkingSpots = await this.loadFromJson()
+        this.saveCache(this.parkingSpots)
         return
     }
 
     getAll() {
-        return this.data;
+        return this.parkingSpots;
     }
 
     setStatus(id, status) {
@@ -33,9 +33,9 @@ export default class ParkingSpotModel {
             throw new Error("Status invalido!")
         }
 
-        this.data[id].status = status
+        this.parkingSpots[id].status = status
 
-        this.saveCache(this.data)
+        this.saveCache(this.parkingSpots)
     }
 
     async loadFromJson() {
@@ -61,20 +61,20 @@ export default class ParkingSpotModel {
     }
 
     loadFromCache() {
-        return JSON.parse(localStorage.getItem("data"))
+        return JSON.parse(localStorage.getItem("parking-spots"))
     }
 
     saveCache(data) {
-        localStorage.setItem("cached", true)
-        localStorage.setItem("data", JSON.stringify(data))
+        localStorage.setItem("parking-spots-cached", true)
+        localStorage.setItem("parking-spots", JSON.stringify(data))
     }
 
     hasCache() {
-        return localStorage.getItem("cached")
+        return localStorage.getItem("parking-spots-cached")
     }
 
     cleanCache() {
-        localStorage.removeItem("cached")
-        localStorage.removeItem("data")
+        localStorage.removeItem("parking-spots-cached")
+        localStorage.removeItem("parking-spots")
     }
 }
