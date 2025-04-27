@@ -1,6 +1,6 @@
 export default class ReservationModel {
     constructor() {
-        this.reservations = this.load();
+        this.reservations = this.load()
     }
     
     create(reservation) {
@@ -21,9 +21,9 @@ export default class ReservationModel {
         return [];
     }
 
-    saveCache(reservations) {
+    saveCache(data) {
         localStorage.setItem("reservations-cache", true)
-        localStorage.setItem("reservations", JSON.stringify(reservations))
+        localStorage.setItem("reservations", JSON.stringify(data))
     }
     
     loadFromCache() {
@@ -31,11 +31,11 @@ export default class ReservationModel {
     }
     
     hasCache() {
-        localStorage.getItem("reservations-cache")
+        return localStorage.getItem("reservations-cache")
     }
 
     cleanCache() {
-        localStorage.removeItem("reservations-cache", true)
-        localStorage.removeItem("reservations", JSON.stringify(reservations))
+        localStorage.removeItem("reservations-cache")
+        localStorage.removeItem("reservations", reservations)
     }
 }
