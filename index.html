@@ -25,58 +25,58 @@
 
     <main>
         
-        <section id="ps-section" class="hidden">
+        <section id="ps-section">
             <h2>Vagas</h2>
             <p>Clique para reservar.</p>
             <div id="ps-container">
         </section>
 
-        <section id="new-reservation" class="">
+        <section id="new-reservation" class="hidden">
             <h2>Cadastro de Reserva de Vaga</h2>
             <p>Preencha todos os campos obrigatórios</p>
-            <form id="parking-reservation">
-                
-                <div class="form-group">
-                    <label for="parkingSpotNumber">Número da Vaga</label>
-                    <input type="text" id="parkingSpotNumber" name="parkingSpotNumber" required readonly value="1">
-                </div>
-                
-                <div class="form-group">
-                    <label for="ownerName">Nome do Proprietário</label>
-                    <input type="text" id="ownerName" name="ownerName" placeholder="Nome completo" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="apartmentNumber">Número do Apartamento</label>
-                    <input type="number" id="apartmentNumber" name="apartmentNumber" min="1" placeholder="10" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="apartmentBlock">Bloco do Apartamento</label>
-                    <input type="text" id="apartmentBlock" name="apartmentBlock" placeholder="Bloco A" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="vehicleModel">Modelo do Veículo</label>
-                    <input type="text" id="vehicleModel" name="vehicleModel" required placeholder="Marca de modelo">                    
-                </div>
-
-                <div class="form-group">
-                    <label for="vehicleSign">Placa do Veículo</label>
-                    <input type="text" id="vehicleSign" name="vehicleSign" placeholder="AAA-0000" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="vehicleColor">Cor do Veículo</label>
-                    <input type="text" id="vehicleColor" name="vehicleColor" placeholder="Cor" required>
-                </div>
-
-                <div class="form-actions">
-                    <button type="reset">Limpar</button>
-                    <button type="submit">Salvar</button>
-                </div>
-
-            </form>
+            <div id="form-container">
+                <form id="parking-reservation">
+                    <div class="form-group">
+                        <label for="parkingSpotNumber">Número da Vaga</label>
+                        <input type="text" id="parkingSpotNumber" name="parkingSpotNumber" required readonly value="1">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="ownerName">Nome do Proprietário</label>
+                        <input type="text" id="ownerName" name="ownerName" placeholder="Nome completo" required>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="apartmentNumber">Número do Apartamento</label>
+                        <input type="number" id="apartmentNumber" name="apartmentNumber" min="1" placeholder="10" required>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="apartmentBlock">Bloco do Apartamento</label>
+                        <input type="text" id="apartmentBlock" name="apartmentBlock" placeholder="Bloco A" required>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="vehicleModel">Modelo do Veículo</label>
+                        <input type="text" id="vehicleModel" name="vehicleModel" required placeholder="Marca de modelo">                    
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="vehicleSign">Placa do Veículo</label>
+                        <input type="text" id="vehicleSign" name="vehicleSign" placeholder="AAA-0000" required>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="vehicleColor">Cor do Veículo</label>
+                        <input type="text" id="vehicleColor" name="vehicleColor" placeholder="Cor" required>
+                    </div>
+    
+                    <div class="form-actions">
+                        <button type="reset">Limpar</button>
+                        <button type="submit">Salvar</button>
+                    </div>
+                </form>
+            </div>
         </section>
 
     </main>

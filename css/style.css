@@ -154,7 +154,7 @@ section p {
     box-shadow: none;
 }
 
-#new-reservation {
+#new-reservation #form-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
