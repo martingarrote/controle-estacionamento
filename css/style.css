@@ -88,18 +88,18 @@ main {
     background-color: white;
 }
 
+section {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
 .hidden {
     display: none;
 }
 
-#ps-section {
-    text-align: center;
-    padding: 3rem 1rem;
-    user-select: none;
-}
 
-#ps-section p {
-    margin-top: 0.5rem;
+section p {
+    margin-top: 0.2rem;
     font-size: 1.4rem;
 }
 
@@ -152,4 +152,86 @@ main {
     border-color: rgb(255, 60, 60);
     cursor: not-allowed;
     box-shadow: none;
+}
+
+#new-reservation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#new-reservation p {
+    font-size: 1.4rem;
+}
+
+#new-reservation p::after {
+    content: ' *';
+    font-size: 1.6rem;
+    color: red;
+}
+
+#parking-reservation {
+    margin-top: 2rem;
+}
+
+.form-group {
+    text-align: left;
+    padding: 0.2rem;
+    margin-bottom: 2rem;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.form-group input {
+    display: block;
+    background-color: rgb(245, 245, 245);
+    width: 35rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid transparent;
+    margin-top: 0.3rem;
+    padding: 0.5rem;
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.form-group input::placeholder {
+    font-size: 1.3rem;
+}
+
+.form-group:has(input[required]) label::after {
+    content: ' *';
+    color: red;
+    font-size: 1.2rem;
+}
+
+.form-group input:focus {
+    border-color: gray;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-actions button {
+    padding: 0.8rem 2rem;
+    background-color: #34aa37;
+    color: white;
+    border: 0.1rem solid transparent;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.form-actions button[type="reset"] {
+    background-color: #f44336;
+}
+
+.form-actions button:hover {
+    opacity: 0.6;
 }
