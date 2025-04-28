@@ -40,7 +40,7 @@ export default class ParkingSpotModel {
 
     async loadFromJson() {
         try {
-            const response = await fetch('/data/parking-spots.json');
+            const response = await fetch('./data/parking-spots.json');
 
             if (!response.ok) {
                 throw new Error("Erro ao receber dados.")
