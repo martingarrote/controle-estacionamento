@@ -13,6 +13,10 @@ export default class ParkingSpotController {
         spotContainer.addEventListener("parking-spot-clicked", (event) => {
             this.dispatchReservationInitiated(event.detail)
         })
+
+        document.addEventListener("reservation-created", (event) => {
+            this.model.setStatus(event.detail.id, 'occupied')
+        })
     }
 
     insertParkingSpots() {
