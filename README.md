@@ -1,5 +1,5 @@
 <h1 align="center">
-  <!-- <img src="" height="300" width="300" alt="" /><br> -->
+  <img src="./assets/images/controle-estacionamento.gif" height="auto" width="auto" alt="" /><br>
   Controle de Estacionamento
 </h1>
 
@@ -29,4 +29,4 @@ Esse projeto consiste em uma aplicação Web com a arquitetura baseada no padrã
 
 - **Model**: Realiza o armazenamento dos dados. Interage com o controller para enviar ou receber dados.
 
-A aplicação é <u>composta exclusivamente pelo frontend</u>, ou seja, não há backend ou banco de dados. O armazenamento de dados será realizado localmente no navegador, e para os dados fixos, através de arquivo **JSON** para simular a response de uma **API**.
+A aplicação é <u>composta exclusivamente pelo frontend</u>, ou seja, não há backend ou banco de dados. O armazenamento de dados será realizado localmente no navegador, e para os dados fixos, através de variável contendo lista de objetos.
