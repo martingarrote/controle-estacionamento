@@ -16,8 +16,13 @@ export default class ParkingSpotView {
         const spotContainer = document.getElementById("ps-container")
 
         spotContainer.addEventListener("click", (e) => {
-            if (e.target.matches('.parking-spot')) {
-                this.dispatchSpotClickEvent(spotContainer, e.target)
+            const target = e.target
+
+            if (target.matches('.parking-spot')) {
+                if (target.querySelector("span").getAttribute("data-status") === "free") {
+                    this.dispatchSpotClickEvent(spotContainer, e.target)
+                }
+                return
             }
         })
     }
