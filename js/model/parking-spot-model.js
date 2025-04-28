@@ -14,8 +14,9 @@ export default class ParkingSpotModel {
             this.parkingSpots = this.loadFromCache()
             return
         }
+
+        this.parkingSpots = this.importData();
         
-        this.parkingSpots = await this.loadFromJson()
         this.saveCache(this.parkingSpots)
         return
     }
@@ -38,28 +39,6 @@ export default class ParkingSpotModel {
         this.saveCache(this.parkingSpots)
     }
 
-    async loadFromJson() {
-        try {
-            const response = await fetch('../../data/parking-spots.json');
-
-            if (!response.ok) {
-                throw new Error("Erro ao receber dados.")
-            }
-
-            const data = await response.json()
-
-            if (!Array.isArray(data)) {
-                throw new Error("Dados recebidos não são condizentes a uma array")
-            }
-
-            return data;
-
-        } catch (error) {
-            console.error(`Erro na importação de dados: ${error}`)
-            return [];
-        }
-    }
-
     loadFromCache() {
         return JSON.parse(localStorage.getItem("parking-spots"))
     }
@@ -76,5 +55,25 @@ export default class ParkingSpotModel {
     cleanCache() {
         localStorage.removeItem("parking-spots-cached")
         localStorage.removeItem("parking-spots")
+    }
+
+    importData() {
+        return [
+            {"id": 1, "number": 1, "status": "Free"},
+            {"id": 2, "number": 2, "status": "Free"},
+            {"id": 3, "number": 3, "status": "Free"},
+            {"id": 4, "number": 4, "status": "Free"},
+            {"id": 5, "number": 5, "status": "Free"},
+            {"id": 6, "number": 6, "status": "Free"},
+            {"id": 7, "number": 7, "status": "Free"},
+            {"id": 8, "number": 8, "status": "Free"},
+            {"id": 9, "number": 9, "status": "Free"},
+            {"id": 10, "number": 10, "status": "Free"},
+            {"id": 11, "number": 11, "status": "Free"},
+            {"id": 12, "number": 12, "status": "Free"},
+            {"id": 13, "number": 13, "status": "Free"},
+            {"id": 14, "number": 14, "status": "Free"},
+            {"id": 15, "number": 15, "status": "Free"}
+        ]
     }
 }
