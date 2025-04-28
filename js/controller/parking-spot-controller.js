@@ -16,6 +16,7 @@ export default class ParkingSpotController {
 
         document.addEventListener("reservation-created", (event) => {
             this.model.setStatus(event.detail.id, 'occupied')
+            this.insertParkingSpots()
         })
     }
 
